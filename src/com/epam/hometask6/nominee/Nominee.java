@@ -19,8 +19,9 @@ public class Nominee extends Person {
     public Nominee() {
     }
 
-    public Nominee(String name, int nomineeAwardQuantityLimit, int nomineeAwardAmountLimit) {
-        super(name);
+    public Nominee(String username, int nomineeAwardQuantityLimit, int nomineeAwardAmountLimit) {
+        super();
+        setUsername(username);
         this.nomineeAwardQuantityLimit = nomineeAwardQuantityLimit;
         this.nomineeAwardAmountLimit = nomineeAwardAmountLimit;
     }
