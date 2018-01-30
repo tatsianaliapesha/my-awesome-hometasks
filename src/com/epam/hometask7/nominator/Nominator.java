@@ -46,10 +46,7 @@ public class Nominator extends Person {
     public boolean isLimitReached(int transitionalLimit) {
 
         System.out.println("Verifying nominator limit...");
-        if (transitionalLimit >= nominatorAwardAmountLimit)
-            return true;
-        else
-            return false;
+        return (transitionalLimit >= nominatorAwardAmountLimit);
     }
 
 }

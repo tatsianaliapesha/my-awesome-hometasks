@@ -35,10 +35,8 @@ public class Nominee extends Person {
     public boolean isLimitReached(int transitionalLimit) {
 
         System.out.println("Verifying nominee limit...");
-        if (transitionalLimit >= nomineeAwardAmountLimit)
-            return true;
-        else
-            return false;
+        return (transitionalLimit >= nomineeAwardAmountLimit);
+
     }
 
     public int getNomineeAwardQuantityLimit() {

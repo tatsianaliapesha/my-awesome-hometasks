@@ -1,11 +1,11 @@
 package com.epam.hometask7.person;
 
-import com.epam.hometask7.operations.IOperationsWithLimit;
+import com.epam.hometask7.operations.OperationsWithLimit;
 
 /**
  * Created by Tatsiana_Liapesha on 1/29/2018.
  */
-public abstract class Person implements IOperationsWithLimit {
+public abstract class Person implements OperationsWithLimit {
 
     private String username;
 
