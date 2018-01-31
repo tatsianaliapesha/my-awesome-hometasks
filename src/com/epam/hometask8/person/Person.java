@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Tatsiana_Liapesha on 1/30/2018.
+ * A simple model of Person data
  */
 public abstract class Person implements OperationsWithLimit {
 
     private String username;
 
-    private List<String> privileges  = new ArrayList<>();
+    private List<String> privileges = new ArrayList<>();
 
     public String getUsername() {
         return username;
@@ -39,13 +39,21 @@ public abstract class Person implements OperationsWithLimit {
         this.username = username;
     }
 
-    public void addPrivileges(){
+    /**
+     * Add 2 specific privileges to a person.
+     */
+    public void addPrivileges() {
 
         this.privileges.add("COMPANY_ACTIVITY_PARTICIPANT");
         this.privileges.add("AWARD_WEB_VIEWER");
     }
 
-    public void addPrivileges(List<String> privileges){
+    /**
+     * Add privileges to a person.
+     *
+     * @param privileges - optional list of privileges
+     */
+    public void addPrivileges(List<String> privileges) {
         this.privileges.addAll(privileges);
     }
 
