@@ -18,10 +18,6 @@ public class Main {
         privileges.add("FEEDBACK_PARTICIPANT");
         privileges.add("CHECKINS_PARTICIPANT");
 
-        Person nominator = new Nominator("Norma_Nominator", 5, 500);
-        Person nomineeRichie = new Nominee("Richie_Recipient", 3, 100);
-        Person nomineeManfred = new Nominee("Manfred_Manager4", 4, 250);
-
         Person[] persons = new Person[]{new Nominator("Norma_Nominator", 5, 500),
                 new Nominee("Richie_Recipient", 3, 100),
                 new Nominee("Manfred_Manager4", 4, 250)};
