@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Tatsiana_Liapesha on 1/30/2018.
+ * The specific object model of Nominator.
  */
 public class Nominator extends Person {
 
@@ -41,7 +41,12 @@ public class Nominator extends Person {
         this.givenAwards = awards;
     }
 
-
+    /**
+     * Method verifies if specific amount reached the allowed maximum. In this case the allowed maximum is specified in nominatorAwardAmountLimit
+     *
+     * @param transitionalLimit - transitional amount received by the moment
+     * @return true if limit is reached false otherwise
+     */
     @Override
     public boolean isLimitReached(int transitionalLimit) {
 
@@ -49,12 +54,20 @@ public class Nominator extends Person {
         return (transitionalLimit >= nominatorAwardAmountLimit);
     }
 
+    /**
+     * Add common privileges and specific Nominator privilege
+     */
     @Override
     public void addPrivileges() {
         super.addPrivileges();
         getPrivileges().add("NOMINATOR");
     }
 
+    /**
+     * Add optional privileges to Nominator.
+     *
+     * @param privileges - optional list of privileges
+     */
     @Override
     public void addPrivileges(List<String> privileges) {
         System.out.println("Adding privileges for Nominator.");

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Tatsiana_Liapesha on 1/30/2018.
+ * Example of polymorphysm usage.
  */
 public class Main {
 

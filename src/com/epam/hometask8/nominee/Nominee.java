@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Tatsiana_Liapesha on 1/30/2018.
+ * The specific object model of Nominee.
  */
 public class Nominee extends Person {
 
@@ -26,11 +26,22 @@ public class Nominee extends Person {
         this.nomineeAwardAmountLimit = nomineeAwardAmountLimit;
     }
 
+    /**
+     * Include given award to the list of received awards and recalculate total amount of received money
+     *
+     * @param award - given award
+     */
     public void receiveAward(Award award) {
         receivedAwards.add(award);
         nomineeRealAmount += award.getRecalculatedValue();
     }
 
+    /**
+     * Method verifies if specific amount reached the allowed maximum. In this case the allowed maximum is specified in nomineeAwardAmountLimit
+     *
+     * @param transitionalLimit - transitional amount received by the moment
+     * @return true if limit is reached false otherwise
+     */
     @Override
     public boolean isLimitReached(int transitionalLimit) {
 
@@ -51,6 +62,9 @@ public class Nominee extends Person {
         return nomineeRealAmount;
     }
 
+    /**
+     * Add common privileges and specific Nominee privilege
+     */
     @Override
     public void addPrivileges() {
         super.addPrivileges();

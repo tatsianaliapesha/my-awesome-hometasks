@@ -1,7 +1,7 @@
 package com.epam.hometask8.award;
 
 /**
- * Created by Tatsiana_Liapesha on 1/30/2018.
+ * A simple model of award data
  */
 public class Award {
 

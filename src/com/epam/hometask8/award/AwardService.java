@@ -7,6 +7,12 @@ import java.util.Random;
  */
 public class AwardService {
 
+    /**
+     * Calculate award amount depending on the initial value and soli
+     *
+     * @param award - award object with specified data
+     * @return - calculated value
+     */
     public static int calculateAwardValue(Award award) {
         int quantity = 0;
         if (!award.isSoliSet()) {
