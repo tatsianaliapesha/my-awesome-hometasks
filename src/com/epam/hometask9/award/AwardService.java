@@ -67,7 +67,7 @@ public class AwardService {
     public static void printAwards(List<Award> awards, String type) {
         System.out.println("\nPrint out all awards of " + type + " type:");
         for (Award award : awards) {
-            if (award.getType() == type)
+            if (award.getType().equals(type))
                 System.out.println("Award id=" + award.getId());
         }
     }
